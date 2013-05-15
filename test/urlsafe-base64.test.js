@@ -42,6 +42,22 @@ describe('URL Safe Base64', function () {
 
   });
 
+  describe('.decode', function () {
+
+    it('should be a function', function (done) {
+      URLSafeBase64.decode.should.be.a.function;
+      done();
+    });
+
+    it('should decode a base64 string correctly', function (done) {
+      var decoded = URLSafeBase64.decode('SGVsbG8gV29ybGQ');
+      decoded.should.be.an.instanceof(Buffer);
+      decoded.toString('utf8').should.equal('Hello World');
+      done();
+    });
+
+  });
+
   describe('.validate', function () {
 
     it('should be a function', function (done) {
