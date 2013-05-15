@@ -33,6 +33,15 @@ The padding character '=' is removed.
   });
 ```
 
+### .decode(string)
+
+Decodes a URL Safe Base64 string as a buffer.
+
+``` javascript
+var someURLSafeBase64 = '';
+URLSafeBase64.decode(someURLSafeBase64); // returns a buffer
+```
+
 ### .validate(string)
 
 Validates a string if it is URL Safe Base64 encoded.
