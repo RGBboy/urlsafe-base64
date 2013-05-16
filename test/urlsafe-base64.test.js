@@ -50,9 +50,12 @@ describe('URL Safe Base64', function () {
     });
 
     it('should decode a base64 string correctly', function (done) {
-      var decoded = URLSafeBase64.decode('SGVsbG8gV29ybGQ');
+      var encodedBase64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-/',
+          normalBase64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
+          testBuffer = new Buffer(normalBase64, 'base64'),
+          decoded = URLSafeBase64.decode(encodedBase64);
       decoded.should.be.an.instanceof(Buffer);
-      decoded.toString('utf8').should.equal('Hello World');
+      decoded.toString('utf8').should.equal(testBuffer.toString('utf8'));
       done();
     });
 
