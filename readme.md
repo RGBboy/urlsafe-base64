@@ -6,7 +6,11 @@ URL Safe Base64 util module for Node.js applications
 
 ## Installation
 
-    npm install urlsafe-base64
+With [npm](http://npmjs.org) do:
+
+```
+npm install urlsafe-base64
+```
 
 ## Usage
 
@@ -58,7 +62,7 @@ Validates a string if it is URL Safe Base64 encoded.
 
 (The MIT License)
 
-Copyright (c) 2013 RGBboy &lt;me@rgbboy.com&gt;
+Copyright (c) 2014 RGBboy &lt;l-_-l@rgbboy.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

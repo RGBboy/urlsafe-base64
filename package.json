@@ -3,15 +3,12 @@
   "version": "0.0.2",
   "description": "URL Safe Base64 encoding",
   "keywords": ["base64", "encoding", "url", "util"],
-  "author": "RGBboy <me@rgbboy.com>",
+  "author": "RGBboy <l-_-l@rgbboy.com>",
   "repository" : {
     "type" : "git",
     "url" : "http://github.com/RGBboy/urlsafe-base64"
   },
   "main": "index",
-  "engines": {
-    "node": "0.8.x"
-  },
   "dependencies": {
   },
   "devDependencies": {
@@ -20,7 +17,6 @@
   },
   "scripts" : {
     "test" : "make test",
-    "unit" : "make unit",
-    "spec" : "make spec"
+    "unit" : "make unit"
   }
 }
