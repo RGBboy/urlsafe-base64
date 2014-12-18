@@ -1,6 +1,6 @@
 {
   "name": "urlsafe-base64",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "URL Safe Base64 encoding",
   "keywords": ["base64", "encoding", "url", "util"],
   "author": "RGBboy <l-_-l@rgbboy.com>",
