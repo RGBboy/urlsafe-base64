@@ -1,7 +1,5 @@
 language: node_js
 node_js:
-  - 0.8
-services:
-  - mongodb
-before_script:
-  - mongo basic-user-schema-test --eval 'db.addUser("basic-user-schema-test", "basic-user-schema-test");'
+  - "0.8"
+  - "0.10"
+  
