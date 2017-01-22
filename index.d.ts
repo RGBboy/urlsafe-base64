@@ -12,6 +12,7 @@ declare module "urlsafe-base64" {
      *       removed.
      */
     export function encode(buffer: Buffer): string;
+
     /**
      * Return an decoded URL Safe Base64 as Buffer
      */
