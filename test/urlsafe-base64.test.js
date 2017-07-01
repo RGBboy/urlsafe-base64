@@ -40,6 +40,21 @@ describe('URL Safe Base64', function () {
       done();
     });
 
+    it('should encode anArrayBuffer correctly', function(done) {
+      var testBase64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
+          testBuffer = new Uint8Array(new Buffer(testBase64, 'base64')).buffer,
+          expectedBase64 = testBase64.replace('+', '-').replace('/', '_');
+      URLSafeBase64.encode(testBuffer).should.equal(expectedBase64);
+      done();
+    });
+
+    it('should encode a string correctly', function(done) {
+      var testBase64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
+          testBuffer = new Buffer(testBase64, 'base64').toString('hex'),
+          expectedBase64 = testBase64.replace('+', '-').replace('/', '_');
+      URLSafeBase64.encode(testBuffer, 'hex').should.equal(expectedBase64);
+      done();
+    });
   });
 
   describe('.decode', function () {
