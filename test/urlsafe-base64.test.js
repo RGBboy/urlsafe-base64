@@ -34,7 +34,7 @@ describe('URL Safe Base64', function () {
 
     it('should encode a buffer correctly', function (done) {
       var testBase64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
-          testBuffer = new Buffer(testBase64, 'base64'),
+          testBuffer = Buffer.from(testBase64, 'base64'),
           expectedBase64 = testBase64.replace('+', '-').replace('/', '_');
       URLSafeBase64.encode(testBuffer).should.equal(expectedBase64);
       done();
@@ -52,7 +52,7 @@ describe('URL Safe Base64', function () {
     it('should decode a base64 string correctly', function (done) {
       var encodedBase64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-/',
           normalBase64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
-          testBuffer = new Buffer(normalBase64, 'base64'),
+          testBuffer = Buffer.from(normalBase64, 'base64'),
           decoded = URLSafeBase64.decode(encodedBase64);
       decoded.should.be.an.instanceof(Buffer);
       decoded.toString('utf8').should.equal(testBuffer.toString('utf8'));
